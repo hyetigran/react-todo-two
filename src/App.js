@@ -19,13 +19,6 @@ class App extends React.Component {
     this.setState({ todoList: newTodoList, todoValue: "" });
   };
 
-  // handleCheck(newStatus, isChecked) {
-  //   let newArray = isChecked // if isChecked is true
-  //     ? [...this.state.filterStatus, newStatus] // add element
-  //     : [...this.state.filterStatus].filter(e => e !== newStatus); // remove the elements that are equal to newStatus
-  //   this.setState({ filterStatus: newArray });
-  // }
-
   handleChange = event => {
     this.setState({ todoValue: event.target.value });
   };
