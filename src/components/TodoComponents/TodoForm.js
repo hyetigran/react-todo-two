@@ -11,6 +11,7 @@ const TodoForm = props => {
           <input
             type="text"
             name="todo"
+            placeholder="what do you need to do?"
             value={props.todoValue}
             onChange={event => props.handleChange(event)}
           />
