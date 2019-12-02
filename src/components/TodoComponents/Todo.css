@@ -1,0 +1,9 @@
+.todoForm {
+  flex: 1;
+  border: 1px solid red;
+}
+
+.todoList {
+  flex: 2;
+  border: 1px solid blue;
+}
