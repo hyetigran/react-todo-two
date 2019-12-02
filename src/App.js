@@ -9,13 +9,12 @@ class App extends React.Component {
     super();
     this.state = {
       todoValue: "",
-      todoList: ["something"]
+      todoList: []
     };
   }
 
   handleSubmit = event => {
     event.preventDefault();
-    console.log(event);
     let newTodoList = [...this.state.todoList, this.state.todoValue];
     this.setState({ todoList: newTodoList, todoValue: "" });
   };
