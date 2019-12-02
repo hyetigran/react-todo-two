@@ -10,8 +10,8 @@ const TodoList = props => {
     <div className="todoList">
       <h1>TodoList</h1>
       <div>
-        {props.todoItems
-          ? props.todoItems.map((item, index) => {
+        {props.todoList
+          ? props.todoList.map((item, index) => {
               return <Todo item={item} key={index} />;
             })
           : null}

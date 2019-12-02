@@ -16,7 +16,7 @@ const TodoForm = props => {
             onChange={event => props.handleChange(event)}
           />
         </label>
-        <button>Add Todo</button>
+        <button type="submit">Add Todo</button>
       </form>
     </div>
   );
