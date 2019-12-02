@@ -1,4 +1,5 @@
 import React from "react";
+import uuid from "uuid";
 
 import TodoForm from "./components/TodoComponents/TodoForm";
 import TodoList from "./components/TodoComponents/TodoList";
@@ -15,7 +16,12 @@ class App extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    let newTodoList = [...this.state.todoList, this.state.todoValue];
+    let newTodoItem = {
+      task: this.state.todoValue,
+      id: uuid(),
+      completed: false
+    };
+    let newTodoList = [...this.state.todoList, newTodoItem];
     this.setState({ todoList: newTodoList, todoValue: "" });
   };
 
