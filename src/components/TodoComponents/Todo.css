@@ -7,3 +7,11 @@
   flex: 2;
   border: 1px solid blue;
 }
+
+.completed {
+  text-decoration: line-through;
+}
+
+.notCompleted {
+  text-decoration: none;
+}

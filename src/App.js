@@ -23,10 +23,24 @@ class App extends React.Component {
     };
     let newTodoList = [...this.state.todoList, newTodoItem];
     this.setState({ todoList: newTodoList, todoValue: "" });
+    console.log(this.state.todoList);
   };
 
   handleChange = event => {
     this.setState({ todoValue: event.target.value });
+  };
+
+  handleComplete = id => {
+    console.log("I was clicked", id);
+    this.setState(prevState => ({
+      todoList: prevState.todoList.map(task => {
+        if (task.id === id) {
+          task.completed = !task.completed;
+        }
+        return task;
+      })
+    }));
+    console.log(this.state.todoList);
   };
 
   render() {
@@ -37,7 +51,10 @@ class App extends React.Component {
           handleChange={this.handleChange}
           handleSubmit={this.handleSubmit}
         />
-        <TodoList todoList={this.state.todoList} />
+        <TodoList
+          todoList={this.state.todoList}
+          handleComplete={this.handleComplete}
+        />
       </div>
     );
   }

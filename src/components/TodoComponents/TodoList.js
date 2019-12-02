@@ -12,7 +12,13 @@ const TodoList = props => {
       <div>
         {props.todoList
           ? props.todoList.map((item, index) => {
-              return <Todo item={item} key={index} />;
+              return (
+                <Todo
+                  item={item}
+                  key={index}
+                  handleComplete={props.handleComplete}
+                />
+              );
             })
           : null}
       </div>
